@@ -4,7 +4,7 @@ import ram from '../assets/ram.png';
 const Home = () => {
 
   return (
-    <section className='bg-gray-900 h-[86.7vh] text-white pt-25 px-[5rem] border-b-2 border-b-gray-400'>
+    <section className='bg-gray-950  text-white py-29 px-[5rem] border-b-2 border-b-gray-400'>
         <div className='flex justify-between items-center'>
             <div >
                 <p className='text-2xl'>Hello, I'm</p>
@@ -12,7 +12,7 @@ const Home = () => {
                 <p className='mt-5 text-gray-400 w-120'>I am a passionate developer specializing in building robust backend applications with Java and crafting fully responsive, user-friendly frontends. I bridge the gap between strong logic and seamless user experience.</p>
                 <div className='mt-12  flex gap-10 '>
                     <button className='py-2 px-5 bg-blue-700 outline-2 outline-blue-700 rounded-lg'>View My Project</button>
-                    <button className='outline-3 outline-gray-600  px-5 rounded-lg '>Contact Me</button>
+                    <button className='outline-3 outline-gray-600  px-5 rounded-lg bg-gray-900'>Contact Me</button>
                 </div>
             </div>
             <div>

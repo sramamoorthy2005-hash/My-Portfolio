@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import Projects from './Projects';
 const Project = () => {
   return (
-    <section className=' bg-gray-900  py-10 text-white px-[5rem] border-b-2 border-b-gray-400'>
+    <section className=' bg-gray-950  py-10 text-white px-[5rem] border-b-2 border-b-gray-400'>
         <div>
             <div>
               <div className='flex justify-between'>
@@ -17,7 +17,7 @@ const Project = () => {
 
             <div className='grid grid-cols-3 gap-5 mt-8'>
               {Projects.map((item)=>(
-                <div key={item.id} className='w-95 border-3   border-gray-500  rounded-2xl'>
+                <div key={item.id} className='w-95 border-3 bg-gray-900  border-gray-500  rounded-2xl'>
                   <div className='h-55 border-b-2 border-gray-500 pb-5  p-3 '><img src={item.img} alt={item.name} className='w-full h-full rounded-xl outline-3 outline-gray-500  object-cover' /></div>
                   <div className='p-5'>
                     <div className='flex  justify-between'>
