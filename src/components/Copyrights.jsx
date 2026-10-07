@@ -16,7 +16,7 @@ const Copyrights = () => {
             </div>
             <div className='flex items-center justify-between py-8 px-[5rem]'>
                 <p className='font-semibold text-xl'>Ramamoorthy S</p>
-                <p>@2026 Ram , All rights reserved.</p>
+                <p>@2026 RamDevi , All rights reserved.</p>
                 <FaCircleArrowUp className='text-[oklch(0.73_0.16_249.53)] text-4xl bg-white rounded-full py-1' />
 
             </div>
