@@ -7,8 +7,8 @@ const Skill = () => {
         <div>
             <div>
                 <h4 className='text-[oklch(0.73_0.16_249.53)] text-xl font-medium'>MY SKILLS</h4>
-                <h2 className='mt-3 text-3xl text-wrap'>Technologies I Work With</h2>
-                <p className='text-wrap mt-5 text-gray-400'>I have hands-on experience with the technologies below and I'm always eager to learn and explore more.</p>
+                <h2 className='mt-3 text-3xl text-wrap max-[425px]:text-xl'>Technologies I Work With</h2>
+                <p className='text-wrap mt-5 text-gray-400 max-[425px]:text-sm'>I have hands-on experience with the technologies below and I'm always eager to learn and explore more.</p>
             </div>
 
             <div className='grid grid-cols-4 mt-10 gap-8 max-[1200px]:grid-cols-3 max-[768px]:grid-cols-2 max-[560px]:grid-cols-1'>
