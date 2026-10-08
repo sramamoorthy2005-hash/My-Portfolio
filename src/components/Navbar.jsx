@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { HiSun } from "react-icons/hi";
 import { FiAlignLeft } from "react-icons/fi";
+import { IoClose } from "react-icons/io5";
 const Navbar = () => {
   const demoNaves = ["Home", "About", "Skill", "Project", "Contact"];
   const [open,setOpen]=useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
 
   return (
     <section className="sticky  top-0">
-      <div className="relative flex justify-between items-center bg-gray-900 shadow-xl py-8 px-[5rem] max-[1200px]:px-[1rem]  ">
+      <div className="relative flex justify-between items-center bg-gray-900 shadow-xl py-8 px-[5rem] max-[1200px]:px-[2rem]  ">
         <div>
           <h2 className="text-2xl font-bold text-[oklch(0.73_0.16_249.53)]">
             <span className="text-white">PORT</span>FOLIO
@@ -19,7 +20,7 @@ const Navbar = () => {
         </div>
         <ul className={`flex gap-[4rem] text-lg text-white font-light  ${open? 'max-lg:flex-col' : 'max-lg:hidden'}  max-lg:absolute  max-lg:left-0 max-lg:gap-4 max-lg:items-center max-lg:p-5  max-lg:right-0 max-lg:top-0 max-lg:min-h-md max-lg:bg-gray-800  `}>
           {demoNaves?.map((nave) => (
-            <li className="hover:underline  underline-offset-8 hover:text-[oklch(0.73_0.16_249.53)]">{nave}</li>
+            <li key={nave} className="hover:underline  underline-offset-8 hover:text-[oklch(0.73_0.16_249.53)]">{nave}</li>
           ))}
         </ul>
         
@@ -29,7 +30,7 @@ const Navbar = () => {
           </button>
           {/* <BsMoonStarsFill className='text-yellow-100' /> */}
           <HiSun className="text-yellow-400 text-2xl" />
-          <FiAlignLeft onClick={menuBar} className="text-[oklch(0.73_0.16_249.53)] z-40 hidden max-lg:block text-3xl"/>
+          <span onClick={menuBar} className="text-[oklch(0.73_0.16_249.53)] cursor-pointer z-40 hidden max-lg:block text-3xl">{open ? <IoClose /> : <FiAlignLeft/>}</span>
         </div>
         
       </div>
