@@ -3,7 +3,7 @@ import skill from './Skills'
 
 const Skill = () => {
   return (
-    <section className=' bg-gray-950  py-10 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]' >
+    <section id='skill' className=' bg-gray-950  py-10 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]' >
         <div>
             <div>
                 <h4 className='text-[oklch(0.73_0.16_249.53)] text-xl font-medium'>MY SKILLS</h4>

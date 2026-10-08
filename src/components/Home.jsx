@@ -4,7 +4,7 @@ import ram from '../assets/ram.png';
 const Home = () => {
 
   return (
-    <section className='bg-gray-950  text-white py-29 px-[5rem] border-b-2 border-b-gray-400 max-lg:py-10 max-[1200px]:px-[2rem]'>
+    <section id='home' className='bg-gray-950  text-white py-29 px-[5rem] border-b-2 border-b-gray-400 max-lg:py-10 max-[1200px]:px-[2rem]'>
         <div className='flex justify-between items-center max-md:flex-col max-lg:gap-15'>
             <div className='pr-25 max-lg:pr-0'>
                 <p className='text-2xl'>Hello, I'm</p>

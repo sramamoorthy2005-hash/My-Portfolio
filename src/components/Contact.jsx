@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { SiIndeed } from "react-icons/si";
 const Contact = () => {
   return (
-    <section className=' bg-gray-950 py-10 text-white px-[5rem]  border-b-2 border-b-gray-400  flex items-center justify-between max-[1200px]:px-[2rem] max-md:flex-col max-md:gap-10'>
+    <section id='contact' className=' bg-gray-950 py-10 text-white px-[5rem]  border-b-2 border-b-gray-400  flex items-center justify-between max-[1200px]:px-[2rem] max-md:flex-col max-md:gap-10'>
       
         <div>
             <div>

@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import Projects from './Projects';
 const Project = () => {
   return (
-    <section className=' bg-gray-950  py-10 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]'>
+    <section id='project' className=' bg-gray-950  py-10 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]'>
         <div>
             <div>
               <div className='flex justify-between'>
