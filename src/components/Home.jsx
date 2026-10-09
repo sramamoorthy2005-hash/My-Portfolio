@@ -25,7 +25,7 @@ const Home = () => {
             experience.
           </p>
           <div className="mt-12  flex gap-10 ">
-            <button className="max-[375px]:px-2 max-[375px]:text-sm  py-2 px-5 bg-blue-700 outline-2 outline-blue-700 rounded-lg">
+            <button className="max-[375px]:px-2 text-black max-[375px]:text-sm  py-2 px-5 bg-[oklch(0.73_0.16_249.53)] outline-2 outline-[oklch(0.73_0.16_249.53)] blue-700 rounded-lg">
               <a href="#project">View My Project</a>
             </button>
             <button className="max-[375px]:px-2 max-[375px]:text-sm outline-3 outline-gray-600  px-5 rounded-lg bg-gray-900">
