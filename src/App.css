@@ -2,3 +2,6 @@
 html{
     scroll-behavior: smooth;
 }
+#home, #about, #skill, #project, #contact {
+  scroll-margin-top: 90px;
+}

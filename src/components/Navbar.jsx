@@ -3,6 +3,7 @@ import { BsMoonStarsFill } from "react-icons/bs";
 import { HiSun } from "react-icons/hi";
 import { FiAlignLeft } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
+import resume from "../../public/Ramamoorthy-softwareDeveloper.pdf"
 const Navbar = () => {
   const demoNaves = ["Home", "About", "Skill", "Project", "Contact"];
   const [open, setOpen] = useState(false);
@@ -60,7 +61,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <button className="font-low  bg-[oklch(0.73_0.16_249.53)] px-3 rounded-xl text-gray-700 py-1 hover:text-white  hover:bg-sky-400 max-lg:hidden">
-            Download Resume
+            <a href={resume} download="Ramamoorthy.S_SoftwareDeveloper.pdf">Download Resume</a>
           </button>
           {/* <BsMoonStarsFill className='text-yellow-100' /> */}
           <HiSun className="text-yellow-400 text-2xl" />
