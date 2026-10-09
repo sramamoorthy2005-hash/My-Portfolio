@@ -2,7 +2,6 @@ import React from "react";
 import { FaBook, FaGraduationCap } from "react-icons/fa6";
 import { GiSkills } from "react-icons/gi";
 import coding from "../assets/coding.jpg";
-import resume from "../../public/Ramamoorthy-softwareDeveloper.pdf";
 import { motion } from "framer-motion";
 const About = () => {
   return (
@@ -91,7 +90,7 @@ const About = () => {
 
           <div className="flex max-[993px]:justify-center">
             <button className="mt-15  font-low  bg-[oklch(0.73_0.16_249.53)] px-3 rounded-xl text-gray-700 py-1   hover:bg-sky-400">
-              <a href={resume} download="Ramamoorthy.S_SoftwareDeveloper.pdf">
+              <a href="/Ramamoorthy-softwareDeveloper.pdf" download="Ramamoorthy.S_SoftwareDeveloper.pdf">
                 Download Resume
               </a>
             </button>
