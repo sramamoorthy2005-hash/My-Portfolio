@@ -83,7 +83,7 @@ const Navbar = () => {
                 className={`cursor-pointer transition-colors duration-200 block py-1 ${
                   active === nave
                     ? "text-[oklch(0.73_0.16_249.53)] font-semibold"
-                    : "text-gray-300 hover:text-white"
+                    : "text-gray-300 hover:text-[oklch(0.73_0.16_249.53)]"
                 }`}
               >
                 {nave}

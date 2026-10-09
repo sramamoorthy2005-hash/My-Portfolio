@@ -51,7 +51,7 @@ const Project = () => {
               </div>
               <div className="p-5">
                 <div className="flex  justify-between">
-                  <h4 className="text-lg font-bold">{item.name}</h4>
+                  <h4 className="text-lg font-bold text-wrap pr-3">{item.name}</h4>
                   <FaGithub className="text-4xl" />
                 </div>
                 <p className="mt-5 text-sky-400 font-medium text-base">
