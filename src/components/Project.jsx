@@ -24,7 +24,7 @@ const Project = ({theme}) => {
               View All Projects <FiArrowUpRight className="text-lg" />
             </button>
           </div>
-          <h2 className={`text-wrap mt-3 text-3xl max-[425px]:text-xl   `}>
+          <h2 className={`text-wrap mt-3 text-3xl max-[425px]:text-xl  ${theme ? 'text-black' : 'text-white'} `}>
             Some of My Project Work
           </h2>
           <p className={`text-wrap mt-5  max-[425px]:text-sm ${theme ? 'text-gray-800' : 'text-gray-400'}`}>
