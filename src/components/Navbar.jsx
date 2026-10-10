@@ -5,11 +5,11 @@ import { FiAlignLeft } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Navbar = ({theme,setTheme}) => {
+const Navbar = ({ theme, setTheme }) => {
   const demoNaves = ["Home", "About", "Skill", "Project", "Contact"];
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("Home");
- 
+
   const menuBar = () => {
     setOpen((prev) => !prev);
   };
@@ -55,9 +55,9 @@ const Navbar = ({theme,setTheme}) => {
   }, []);
 
   //Theme
-  const handleTheme = ()=>{
-    setTheme((prev)=>!prev);
-  }
+  const handleTheme = () => {
+    setTheme((prev) => !prev);
+  };
   return (
     <motion.section
       initial={{ y: -80, opacity: 0 }}
@@ -65,8 +65,9 @@ const Navbar = ({theme,setTheme}) => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="sticky top-0 z-50 backdrop-blur-md"
     >
-      <div className={`relative flex justify-between items-center ${theme ? "bg-white" : "bg-gray-900"} shadow-xl py-6 px-[5rem] max-[1200px]:px-[2rem] `}>
-        
+      <div
+        className={`relative flex justify-between items-center ${theme ? "bg-white" : "bg-gray-900"} transition-colors duration-500 ease-in shadow-xl py-6 px-[5rem] max-[1200px]:px-[2rem] `}
+      >
         {/* Logo */}
         <motion.div whileHover={{ scale: 1.05 }} className="cursor-pointer">
           <a
@@ -74,7 +75,12 @@ const Navbar = ({theme,setTheme}) => {
             onClick={(e) => handleNavClick(e, "Home")}
             className="text-2xl font-bold text-[oklch(0.73_0.16_249.53)]"
           >
-            <span className={`${theme ? 'text-black' : 'text-white'}`}>PORT</span>FOLIO
+            <span
+              className={`${theme ? "text-black" : "text-white"} transition-colors duration-900 ease-in`}
+            >
+              PORT
+            </span>
+            FOLIO
           </a>
         </motion.div>
 
@@ -85,10 +91,12 @@ const Navbar = ({theme,setTheme}) => {
               <a
                 href={`#${nave.toLowerCase()}`}
                 onClick={(e) => handleNavClick(e, nave)}
-                className={`cursor-pointer transition-colors duration-200 block py-1 ${
+                className={`transition-colors duration-900 ease-in cursor-pointer transition-colors duration-200 block py-1 ${
                   active === nave
                     ? " text-[oklch(0.73_0.16_249.53)] font-semibold"
-                    : theme ? "text-gray-700 hover:text-[oklch(0.73_0.16_249.53)]" : "text-gray-300 hover:text-[oklch(0.73_0.16_249.53)]"
+                    : theme
+                      ? "text-gray-700 hover:text-[oklch(0.73_0.16_249.53)]"
+                      : "text-gray-300 hover:text-[oklch(0.73_0.16_249.53)]"
                 }`}
               >
                 {nave}
@@ -111,7 +119,7 @@ const Navbar = ({theme,setTheme}) => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`font-medium bg-[oklch(0.73_0.16_249.53)] px-4 rounded-xl  ${theme ? 'text-white hover:text-black ' : 'text-gray-900 hover:text-white '} py-1.5 hover:bg-sky-400 max-lg:hidden transition-all shadow-md shadow-sky-950/40`}
+            className={`font-medium bg-[oklch(0.73_0.16_249.53)] px-4 rounded-xl transition-colors ease-in ${theme ? "text-white hover:text-black " : "text-gray-900 hover:text-white "} py-1.5 hover:bg-sky-400 max-lg:hidden transition-all shadow-md shadow-sky-950/40`}
           >
             <a
               href="/Ramamoorthy-softwareDeveloper.pdf"
@@ -121,7 +129,34 @@ const Navbar = ({theme,setTheme}) => {
             </a>
           </motion.button>
 
-          <span onClick={handleTheme}>{theme ? <BsMoonStarsFill className=" text-2xl cursor-pointer"/> : <HiSun  className="text-yellow-400 text-2xl cursor-pointer" />}</span>
+          <button
+            onClick={handleTheme}
+            className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full cursor-pointer focus:outline-none"
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              {theme ? (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: -90, scale: 0, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: 90, scale: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <BsMoonStarsFill className="text-2xl text-gray-700" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: 90, scale: 0, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: -90, scale: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <HiSun className="text-2xl text-yellow-400" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
 
           {/* Mobile Hamburger / Close toggle */}
           <motion.span
@@ -162,7 +197,7 @@ const Navbar = ({theme,setTheme}) => {
                 href="/Ramamoorthy-softwareDeveloper.pdf"
                 download="Ramamoorthy.S_SoftwareDeveloper.pdf"
                 onClick={() => setOpen(false)}
-                className="mt-2 bg-[oklch(0.73_0.16_249.53)] text-gray-900 px-5 py-2.5 rounded-xl font-medium w-full text-center hover:bg-sky-400 transition-colors"
+                className="transition-colors duration-900 ease-in mt-2 bg-[oklch(0.73_0.16_249.53)] text-gray-900 px-5 py-2.5 rounded-xl font-medium w-full text-center hover:bg-sky-400 transition-colors"
               >
                 Download Resume
               </a>
