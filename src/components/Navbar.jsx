@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { HiSun } from "react-icons/hi";
+import { BsMoonStarsFill } from "react-icons/bs";
 import { FiAlignLeft } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({theme,setTheme}) => {
   const demoNaves = ["Home", "About", "Skill", "Project", "Contact"];
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("Home");
-
+ 
   const menuBar = () => {
     setOpen((prev) => !prev);
   };
@@ -53,6 +54,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  //Theme
+  const handleTheme = ()=>{
+    setTheme((prev)=>!prev);
+  }
   return (
     <motion.section
       initial={{ y: -80, opacity: 0 }}
@@ -60,7 +65,7 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="sticky top-0 z-50 backdrop-blur-md"
     >
-      <div className="relative flex justify-between items-center bg-gray-900 shadow-xl py-6 px-[5rem] max-[1200px]:px-[2rem] border-b border-gray-800">
+      <div className={`relative flex justify-between items-center ${theme ? "bg-white" : "bg-gray-900"} shadow-xl py-6 px-[5rem] max-[1200px]:px-[2rem] `}>
         
         {/* Logo */}
         <motion.div whileHover={{ scale: 1.05 }} className="cursor-pointer">
@@ -69,7 +74,7 @@ const Navbar = () => {
             onClick={(e) => handleNavClick(e, "Home")}
             className="text-2xl font-bold text-[oklch(0.73_0.16_249.53)]"
           >
-            <span className="text-white">PORT</span>FOLIO
+            <span className={`${theme ? 'text-black' : 'text-white'}`}>PORT</span>FOLIO
           </a>
         </motion.div>
 
@@ -82,8 +87,8 @@ const Navbar = () => {
                 onClick={(e) => handleNavClick(e, nave)}
                 className={`cursor-pointer transition-colors duration-200 block py-1 ${
                   active === nave
-                    ? "text-[oklch(0.73_0.16_249.53)] font-semibold"
-                    : "text-gray-300 hover:text-[oklch(0.73_0.16_249.53)]"
+                    ? " text-[oklch(0.73_0.16_249.53)] font-semibold"
+                    : theme ? "text-gray-700 hover:text-[oklch(0.73_0.16_249.53)]" : "text-gray-300 hover:text-[oklch(0.73_0.16_249.53)]"
                 }`}
               >
                 {nave}
@@ -106,7 +111,7 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="font-medium bg-[oklch(0.73_0.16_249.53)] px-4 rounded-xl text-gray-900 py-1.5 hover:text-white hover:bg-sky-400 max-lg:hidden transition-all shadow-md shadow-sky-950/40"
+            className={`font-medium bg-[oklch(0.73_0.16_249.53)] px-4 rounded-xl  ${theme ? 'text-white hover:text-black ' : 'text-gray-900 hover:text-white '} py-1.5 hover:bg-sky-400 max-lg:hidden transition-all shadow-md shadow-sky-950/40`}
           >
             <a
               href="/Ramamoorthy-softwareDeveloper.pdf"
@@ -116,7 +121,7 @@ const Navbar = () => {
             </a>
           </motion.button>
 
-          <HiSun className="text-yellow-400 text-2xl cursor-pointer" />
+          <span onClick={handleTheme}>{theme ? <BsMoonStarsFill className=" text-2xl cursor-pointer"/> : <HiSun  className="text-yellow-400 text-2xl cursor-pointer" />}</span>
 
           {/* Mobile Hamburger / Close toggle */}
           <motion.span

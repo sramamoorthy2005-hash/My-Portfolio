@@ -1,11 +1,11 @@
 import React from "react";
 import skill from "./Skills";
 import { motion } from "framer-motion";
-const Skill = () => {
+const Skill = ({theme}) => {
   return (
     <section
       id="skill"
-      className=" bg-gray-950  py-10 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]"
+      className={` ${theme ? 'bg-gray-100 border-b-black' : 'bg-gray-950 border-b-gray-400'}  py-10 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]`}
     >
       <div>
         <motion.div
@@ -17,10 +17,10 @@ const Skill = () => {
           <h4 className="text-[oklch(0.73_0.16_249.53)] text-xl font-medium">
             MY SKILLS
           </h4>
-          <h2 className="mt-3 text-3xl text-wrap max-[425px]:text-xl">
+          <h2 className={`mt-3 text-3xl text-wrap max-[425px]:text-xl ${theme ? 'text-black' : 'text-white '}`}>
             Technologies I Work With
           </h2>
-          <p className="text-wrap mt-5 text-gray-400 max-[425px]:text-sm">
+          <p className={`text-wrap mt-5 max-[425px]:text-sm ${theme ? 'text-gray-800' : 'text-gray-400'}`}>
             I have hands-on experience with the technologies below and I'm
             always eager to learn and explore more.
           </p>
@@ -38,7 +38,7 @@ const Skill = () => {
                 scale: 1.05,
                 borderColor: "oklch(0.73 0.16 249.53)",
               }}
-              className="border-3 border-gray-700 bg-gray-900 p-3 py-4 rounded-xl cursor-pointer transition-colors"
+              className={` ${theme ? 'bg-white' : 'bg-gray-900 border-3 border-gray-700'} shadow-2xl p-3 py-4 rounded-xl cursor-pointer transition-colors`}
             >
               <div className="w-25 h-15 flex flex-col ">
                 <img
@@ -46,11 +46,11 @@ const Skill = () => {
                   alt=""
                   className="w-full h-full object-contain"
                 />
-                <span className=" text-xl font-semibold text-center mt-2">
+                <span className={` text-xl font-semibold text-center mt-2 ${theme ? 'text-black' : 'text-white '}`}>
                   {val.name}
                 </span>
               </div>
-              <p className="mt-15 px-7 text-gray-400">
+              <p className={`mt-15 px-7 text-gray-400 ${theme ? 'text-gray-800' : 'text-gray-400'}`}>
                 Object-orlented programmingand core Java concepts.
               </p>
             </motion.div>

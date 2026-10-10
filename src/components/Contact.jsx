@@ -4,11 +4,11 @@ import { FaLinkedin, FaSquareGithub } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { SiIndeed } from "react-icons/si";
 import { motion } from "framer-motion";
-const Contact = () => {
+const Contact = ({theme}) => {
   return (
     <section
       id="contact"
-      className=" bg-gray-950 py-10 text-white px-[5rem]  border-b-2 border-b-gray-400  flex items-center justify-between max-[1200px]:px-[2rem] max-md:flex-col max-md:gap-10"
+      className={` ${theme ? 'bg-gray-100 border-b-black' : 'bg-gray-950 border-b-gray-400'} py-10 text-white px-[5rem]  border-b-2 border-b-gray-400  flex items-center justify-between max-[1200px]:px-[2rem] max-md:flex-col max-md:gap-10`}
     >
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -20,8 +20,8 @@ const Contact = () => {
           <h4 className="text-[oklch(0.73_0.16_249.53)] text-xl font-medium">
             Get in Touch
           </h4>
-          <h2 className="mt-3 text-3xl text-wrap  ">Let's Work Together</h2>
-          <p className="mt-5 text-lg text-gray-400 text-wrap ">
+          <h2 className={`mt-3 text-3xl text-wrap  ${theme ? 'text-black' : 'text-white '}`}>Let's Work Together</h2>
+          <p className={`mt-5 text-lg ${theme ? 'text-gray-800' : 'text-gray-400'} text-wrap `}>
             I'm always open to new opportunities, collaboration and interesting
             projects. Feel to reach out!
           </p>
@@ -30,8 +30,8 @@ const Contact = () => {
           <div className="flex items-center mt-8 gap-5">
             <MdEmail className="text-4xl text-[oklch(0.73_0.16_249.53)] bg-sky-950 p-1 rounded-xl" />
             <div>
-              <p className="font-semibold text-lg ">Email</p>
-              <p className="text-gray-400 break-all">
+              <p className={`font-semibold text-lg ${theme ? 'text-black' : 'text-white '}`}>Email</p>
+              <p className={`${theme ? 'text-gray-800' : 'text-gray-300'} break-all`}>
                 sramamoorthy2005@gmail.com
               </p>
             </div>
@@ -40,16 +40,16 @@ const Contact = () => {
           <div className="flex items-center mt-8 gap-5">
             <MdPhone className="shrink-0 text-4xl text-[oklch(0.73_0.16_249.53)] bg-sky-950 p-1 rounded-xl" />
             <div>
-              <p className="font-semibold text-lg ">Phone</p>
-              <p className="text-gray-400">6374785912</p>
+              <p className={`font-semibold text-lg ${theme ? 'text-black' : 'text-white '}`}>Phone</p>
+              <p className={`${theme ? 'text-gray-800' : 'text-gray-300'} break-all`}>6374785912</p>
             </div>
           </div>
 
           <div className="flex items-center mt-8 gap-5">
             <MdLocationPin className="shrink-0 text-4xl text-[oklch(0.73_0.16_249.53)] bg-sky-950 p-1 rounded-xl" />
             <div>
-              <p className="font-semibold text-lg ">Location</p>
-              <p className="text-gray-400">Tenkasi,Tamil</p>
+              <p className={`font-semibold text-lg ${theme ? 'text-black' : 'text-white '}`}>Location</p>
+              <p className={`${theme ? 'text-gray-800' : 'text-gray-300'} break-all`}>Tenkasi,Tamil</p>
             </div>
           </div>
         </div>

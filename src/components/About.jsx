@@ -3,11 +3,11 @@ import { FaBook, FaGraduationCap } from "react-icons/fa6";
 import { GiSkills } from "react-icons/gi";
 import coding from "../assets/coding.jpg";
 import { motion } from "framer-motion";
-const About = () => {
+const About = ({theme}) => {
   return (
     <section
       id="about"
-      className=" bg-gray-950  py-16 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]"
+      className={` ${theme ? 'bg-gray-100 border-b-black' : 'bg-gray-950 border-b-gray-400'}  py-16 text-white px-[5rem] border-b-2  max-[1200px]:px-[2rem]`}
     >
       <div className="flex justify-between max-md:flex-col max-md:gap-10 max-md:items-center">
         <div>
@@ -20,7 +20,7 @@ const About = () => {
             <h4 className="text-[oklch(0.73_0.16_249.53)] text-xl font-medium">
               ABOUT ME
             </h4>
-            <p className="mt-5 text-wrap max-md:pr-0 pr-15 text-gray-400">
+            <p className={`mt-5 text-wrap max-md:pr-0 pr-15 ${theme ? 'text-gray-800' : 'text-gray-400 '} `}>
               Hello! I'm Ramamoorthy, a developer who bridges the gap between
               complex logic and clean design. My main focus is on Java backend
               development paired with responsive frontend creation. I thrive on
@@ -39,10 +39,10 @@ const About = () => {
             >
               <FaGraduationCap className="shrink-0 text-5xl text-[oklch(0.73_0.16_249.53)] bg-sky-950 p-1 rounded-xl" />
               <div>
-                <p className="text-lg font-semibold max-sm:text-base">
+                <p className={`text-lg font-semibold max-sm:text-base ${theme ? 'text-black' : 'text-white '}`}>
                   Bachelor's Degree
                 </p>
-                <p className="text-gray-300 max-sm:text-sm">
+                <p className={` max-sm:text-sm ${theme ? 'text-gray-800' : 'text-gray-300'}`}>
                   PSRR College of Engineering
                 </p>
               </div>
@@ -58,10 +58,10 @@ const About = () => {
             >
               <GiSkills className="shrink-0 text-5xl text-[oklch(0.73_0.16_249.53)] bg-sky-950 p-1 rounded-xl" />
               <div>
-                <p className="text-lg font-semibold max-sm:text-base">
+                <p className={`text-lg font-semibold max-sm:text-base ${theme ? 'text-black' : 'text-white '}`}>
                   Key Skills
                 </p>
-                <p className="text-gray-300 max-sm:text-sm">
+                <p className={` max-sm:text-sm ${theme ? 'text-gray-800' : 'text-gray-300'}`}>
                   Java, HTML5, CSS3, JavaScript, MySQL
                 </p>
               </div>
@@ -77,10 +77,10 @@ const About = () => {
             >
               <FaBook className=" shrink-0 text-5xl text-[oklch(0.73_0.16_249.53)]  bg-sky-950 p-1 rounded-xl" />
               <div>
-                <p className="text-lg font-semibold max-sm:text-base">
+                <p className={`text-lg font-semibold max-sm:text-base ${theme ? 'text-black' : 'text-white '}`}>
                   Continuous Learning
                 </p>
-                <p className="text-gray-300 text-wrap pr-15  max-md:pr-0 max-sm:text-sm">
+                <p className={` max-sm:text-sm ${theme ? 'text-gray-800' : 'text-gray-300'}`}>
                   Always eager to learn and adapt to new technologies to stay
                   ahead in the field of software development.
                 </p>

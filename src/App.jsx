@@ -9,14 +9,15 @@ import Contact from "./components/Contact";
 import Copyrights from "./components/Copyrights";
 
 function App() {
+   const [theme,setTheme] = useState(false);
   return (
     <>
-      <Navbar />
-      <Home />
-      <About />
-      <Skill />
-      <Project />
-      <Contact />
+      <Navbar theme={theme} setTheme={setTheme}/>
+      <Home theme={theme}/>
+      <About theme={theme}/>
+      <Skill theme={theme} />
+      <Project theme={theme}/>
+      <Contact theme={theme}/>
       {/* <Copyrights /> */}
     </>
   );

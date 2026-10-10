@@ -3,11 +3,11 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
-const Project = () => {
+const Project = ({theme}) => {
   return (
     <section
       id="project"
-      className=" bg-gray-950  py-10 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]"
+      className={`  ${theme ? 'bg-gray-100 border-b-black' : 'bg-gray-950 border-b-gray-400'} py-10 text-white px-[5rem] border-b-2 border-b-gray-400 max-[1200px]:px-[2rem]`}
     >
       <div>
         <motion.div
@@ -20,14 +20,14 @@ const Project = () => {
             <h4 className="text-[oklch(0.73_0.16_249.53)] text-xl font-medium max-md:text-lg">
               MY PROJECTS
             </h4>
-            <button className="flex items-center gap-1 font-light  bg-white font-semibold px-3 rounded-xl text-gray-700 py-1 hover:bg-sky-400 hover:text-white  max-[425px]:text-sm ">
-              View All Projects <FiArrowUpRight className="text-lg" />{" "}
+            <button className={`flex items-center gap-1 font-light   font-semibold px-3 rounded-xl   py-1   max-[425px]:text-sm ${theme ? 'text-white bg-black hover:bg-sky-400' : 'text-gray-700 bg-white hover:bg-sky-400 hover:text-white'}`}>
+              View All Projects <FiArrowUpRight className="text-lg" />
             </button>
           </div>
-          <h2 className="text-wrap mt-3 text-3xl max-[425px]:text-xl">
+          <h2 className={`text-wrap mt-3 text-3xl max-[425px]:text-xl   `}>
             Some of My Project Work
           </h2>
-          <p className="text-wrap mt-5 text-gray-400 max-[425px]:text-sm">
+          <p className={`text-wrap mt-5  max-[425px]:text-sm ${theme ? 'text-gray-800' : 'text-gray-400'}`}>
             Here are a few projects I've built to showcase my skills and passion
             for development
           </p>
@@ -51,14 +51,14 @@ const Project = () => {
               </div>
               <div className="p-5">
                 <div className="flex  justify-between">
-                  <h4 className="text-lg font-bold text-wrap pr-3">{item.name}</h4>
-                  <FaGithub className="text-4xl" />
+                  <h4 className={`text-lg font-bold text-wrap pr-3 ${theme ? 'text-black' : 'text-white '}`}>{item.name}</h4>
+                  <FaGithub className={`text-4xl ${theme ? 'text-black' : 'text-white '}`} />
                 </div>
                 <p className="mt-5 text-sky-400 font-medium text-base">
                   <span className=" font-normal text-lg">Stack :</span>{" "}
                   {item.stack}
                 </p>
-                <ul className="mt-7 list-disc px-4 flex flex-col gap-3 text-base text-gray-400">
+                <ul className={`mt-7 list-disc px-4 flex flex-col gap-3 text-base ${theme ? 'text-gray-800' : 'text-gray-400'}`}>
                   <li>{item.des1}</li>
                   <li>{item.des2}</li>
                   <li>{item.des3}</li>
