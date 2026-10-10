@@ -90,7 +90,7 @@ const About = ({theme}) => {
 
           <div className="flex max-[993px]:justify-center">
             <button className="mt-15  font-low  bg-[oklch(0.73_0.16_249.53)] px-3 rounded-xl text-gray-700 py-1   hover:bg-sky-400">
-              <a href="/Ramamoorthy-softwareDeveloper.pdf" download="Ramamoorthy.S_SoftwareDeveloper.pdf">
+              <a href="/resume.pdf" download="Ramamoorthy.S_SoftwareDeveloper.pdf">
                 Download Resume
               </a>
             </button>
@@ -101,8 +101,8 @@ const About = ({theme}) => {
           initial={{ opacity: 0, x: 40, scale: 0.95 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          whileHover={{ y: -6, transition: { duration: 0.2 } }}
+          transition={{ duration: 0.7,delay: 0.7, ease: "easeOut" }}
+          whileHover={{ y: -6, transition: { duration: 0.4 } }}
         >
           <div className="border-3 border-gray-700 max-md:w-90  max-sm:w-auto  max-md:mx-5  rounded-lg bg-gray-900">
             <div className="max-md:w-auto  w-75  border-b-3 border-gray-700">

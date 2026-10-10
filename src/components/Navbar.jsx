@@ -122,7 +122,7 @@ const Navbar = ({ theme, setTheme }) => {
             className={`font-medium bg-[oklch(0.73_0.16_249.53)] px-4 rounded-xl transition-colors ease-in ${theme ? "text-white hover:text-black " : "text-gray-900 hover:text-white "} py-1.5 hover:bg-sky-400 max-lg:hidden transition-all shadow-md shadow-sky-950/40`}
           >
             <a
-              href="/Ramamoorthy-softwareDeveloper.pdf"
+              href="/resume.pdf"
               download="Ramamoorthy.S_SoftwareDeveloper.pdf"
             >
               Download Resume
